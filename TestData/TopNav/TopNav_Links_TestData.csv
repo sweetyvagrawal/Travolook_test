@@ -1,0 +1,6 @@
+Target_Element,Target_Element_To_Test,Expected_Element_Text,Expected_Link_Text,Expected_Url,Expected_Title
+//nav/div/div/ul[1]/li[1]/a,//div[@class='searchEng']/h3,Book Domestic and International flights,Home,https://www.travolook.in/,Book Flights Tickets for Domestic & International Destinations
+//nav/div/div/ul[1]/li[2]/a,//div[@class]/div[6]/p,Customer Benefits,Offers,https://www.travolook.in/offers,
+//nav/div/div/ul[1]/li[3]/a,//div[@class='col-12']/h5[5],Quick Links,Sitemap,https://www.travolook.in/sitemap,Travolook- SiteMap
+//nav/div/div/ul[1]/li[4]/a,//div[@class='container py-3']/h1,Contact Us,Contact,https://www.travolook.in/contact-us,Travolook-Contact Us
+//nav/div/div/ul[1]/li[5]/a,//div[@class='col-12']/p,Please complete the form (*),Make Payment,https://www.travolook.in/MakePayment,Travolook-Make Payment

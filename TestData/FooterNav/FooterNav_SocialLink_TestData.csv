@@ -1,0 +1,5 @@
+Target_Link,Expected_url,Expected_Title,Icon_Class
+//div[@class='col-12 col-md-4 sociali rspdl0 rspdr0']/a[1],https://www.facebook.com/travolook/,Travolook - Home | Facebook,fa fa-facebook
+//div[@class='col-12 col-md-4 sociali rspdl0 rspdr0']/a[2],https://twitter.com/travolook,travolook (@travolook) / Twitter,fa fa-twitter
+//div[@class='col-12 col-md-4 sociali rspdl0 rspdr0']/a[4],https://www.pinterest.com/stravolook/,travolook (stravolook) on Pinterest,fa fa-pinterest
+//div[@class='col-12 col-md-4 sociali rspdl0 rspdr0']/a[5],https://www.instagram.com/travolook/,Travolook (@travolook),fa fa-instagram

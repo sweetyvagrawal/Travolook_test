@@ -1,0 +1,3 @@
+Dropdown_Menu_Item_Element,Expected_dropdown_item_Text,Target_Content_Element,Expected_Content_Text,Expected_Url,Expected_Title
+//li[@id='resclick']/div[@class='dropdown-menu']/a[1],24x7Support,//div[@class='container py-3']/h1,Contact Us,https://www.travolook.in/contact-us,Travolook-Contact Us
+//li[@id='resclick']/div[@class='dropdown-menu']/a[2],Cancel/Reschedule,//div[@class='col-12']/h4,Cancel/Reschedule your booking,https://www.travolook.in/rescheduling,Travolook-Cancel or Reschedule Booking

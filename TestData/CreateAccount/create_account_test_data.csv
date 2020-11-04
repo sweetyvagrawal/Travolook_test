@@ -1,0 +1,16 @@
+FirstName,LastName,Email_Id,Password,Is_Registered,Data_Complete
+,gohil,grace@123.com,abc130,,FALSE
+,,grace@123.com,abc131,,FALSE
+,,,abc132,,FALSE
+gordan,,grace@123.com,abc133,,FALSE
+gordan,,,abc134,,FALSE
+gordan,,,,,FALSE
+gordan,gohil,,abc136,,FALSE
+gordan,gohil,,,,FALSE
+gordan,gohil,abc@abc.com,,Yes,FALSE
+gordan,gohil,grace@123.com,abc139,Yes,TRUE
+gordan,,grace@123.com,,,FALSE
+,gohil,,abc141,,FALSE
+,gohil,abc@abc.com,,,FALSE
+tahi,gohil,abc@abc.com,34v@123,Yes,TRUE
+snehal,patel,viral@patel1.com,asdfd,No,TRUE

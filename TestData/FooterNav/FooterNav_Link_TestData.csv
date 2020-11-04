@@ -1,0 +1,11 @@
+Target_Link,Target_Link_Expected_Text,Target_Element_Text,Expected_Element_Text,Expected_Url,Expected_Title
+//ul[@class='footermenu']/li[1]/a,Home,//div[@class='searchEng']/h3,Book Domestic and International flights,https://www.travolook.in/,Book Flights Tickets for Domestic & International Destinations
+//ul[@class='footermenu']/li[2]/a,About us,"//div[@class=""container py-3 text-justify""]/h1",About us,https://www.travolook.in/about-us,Abouts Us- Travolook
+//ul[@class='footermenu']/li[3]/a,Contact us,"//div[@class=""container py-3""]/h1",Contact Us,https://www.travolook.in/contact-us,Travolook-Contact Us
+//ul[@class='footermenu']/li[4]/a,Privacy Policy,"//div[@class=""container py-3""]/h1",Privacy Policy,https://www.travolook.in/privacy-policy,Travolook-Privacy Policy
+//ul[@class='footermenu']/li[5]/a,Terms & Conditions,"//div[@class=""container py-3""]/h1",Terms and Conditions,https://www.travolook.in/terms-conditions,Travolook-Terms and Conditions
+//ul[@class='footermenu']/li[6]/a,Disclaimer,"//div[@class=""container py-3""]/h1",Disclaimer,https://www.travolook.in/disclaimer,Travolook-Disclaimer
+//ul[@class='footermenu']/li[7]/a,Cookies,"//div[@class=""container py-3""]/h1",Cookies,https://www.travolook.in/cookies,Travolook-Cookies
+//ul[@class='footermenu']/li[8]/a,Sitemap,"//div[@class=""col-12""]/h5[5]",Quick Links,https://www.travolook.in/sitemap,Travolook- SiteMap
+//ul[@class='footermenu']/li[9]/a,Refund Policy,"//div[@class=""container py-3""]/h1",Refund Policy,https://www.travolook.in/refund-policies,
+//ul[@class='footermenu']/li[10]/a,Make Payment,"//div[@class=""col-12""]/p",Please complete the form (*),https://www.travolook.in/MakePayment,Travolook-Make Payment
