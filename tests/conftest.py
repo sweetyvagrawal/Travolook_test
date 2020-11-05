@@ -6,6 +6,7 @@ from selenium import webdriver
 from selenium.webdriver import ActionChains
 from selenium.webdriver.support.wait import WebDriverWait
 
+from POM.ContactUs import ContactUs
 from POM.CreateAnAccountPage import CreateAnAccountPage
 from POM.FooterNav import FooterNav
 from POM.ForgetPasswordPage import ForgotPasswordPage
@@ -71,3 +72,7 @@ def forgot_password_page(request) -> ForgotPasswordPage:
 def create_account_page(request) -> CreateAnAccountPage:
     return CreateAnAccountPage(request.cls.driver)
 
+
+@pytest.fixture(scope="function")
+def contact_us_page(request) -> ContactUs:
+    return ContactUs(request.cls.driver)

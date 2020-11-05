@@ -4,6 +4,7 @@ from selenium.webdriver.common.by import By
 
 class TopNav:
     LOGIN_LINK_LOCATOR = (By.ID, "login_top1")
+    CONTACT_LINK_LOCATOR = (By.XPATH, "//nav/div/div/ul[1]/li[4]/a")
 
     def __init__(self, driver: webdriver):
         self.driver = driver
@@ -18,7 +19,7 @@ class TopNav:
         return self.driver.find_element_by_xpath("//nav/div/div/ul[1]/li[3]/a")
 
     def contact_link(self):
-        return self.driver.find_element_by_xpath("//nav/div/div/ul[1]/li[4]/a")
+        return self.driver.find_element(self.CONTACT_LINK_LOCATOR[0], self.CONTACT_LINK_LOCATOR[1])
 
     def make_payment_link(self):
         return self.driver.find_element_by_xpath("//nav/div/div/ul[1]/li[5]/a")
