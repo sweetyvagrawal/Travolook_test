@@ -21,7 +21,7 @@ def create_account_data(request):
 @pytest.mark.usefixtures("create_account_page")
 @pytest.mark.usefixtures("top_nav")
 @pytest.mark.usefixtures("login_page")
-class TestCreateAccountPage:
+class TestCreateAccount:
     def test_create_account_window_labels(self, logger, create_account_page, top_nav, login_page):
         try:
             top_nav.login_link().click()

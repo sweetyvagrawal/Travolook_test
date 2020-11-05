@@ -1,7 +1,7 @@
 from selenium import webdriver
 
 
-class ContactUs:
+class ContactUsPage:
     def __init__(self, driver: webdriver):
         self.driver = driver
 
