@@ -1,6 +1,6 @@
 import pytest
 from selenium.webdriver.support import expected_conditions
-from Utilities.EmailData_ import email_data
+from Utilities.data_fixtures import email_data
 from tests.conftest import action_chains
 
 

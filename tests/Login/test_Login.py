@@ -2,7 +2,7 @@ import csv
 import pytest
 from selenium.webdriver.support import expected_conditions
 
-from Utilities.EmailData_ import load_emails_data
+from Utilities.data_fixtures import load_emails_data
 from Utilities.utility import get_test_data_path
 
 
