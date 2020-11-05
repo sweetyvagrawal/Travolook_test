@@ -1,19 +1,18 @@
 import pytest
 from selenium.webdriver.support import expected_conditions
-
-from Utilities.data_fixtures import email_data, mobile_data
+from Utilities.data_fixtures import email_data, mobile_data, contact_us_link_data
 
 
 @pytest.fixture(params=[{"name": "", "is_valid": False}, {"name": "tom", "is_valid": True}])
 def name_input_data(request):
     return request.param
 
+
 @pytest.mark.usefixtures("setup")
 @pytest.mark.usefixtures("logger")
 @pytest.mark.usefixtures("explicit_wait")
 @pytest.mark.usefixtures("top_nav")
 @pytest.mark.usefixtures("contact_us_page")
-
 class TestContactUs:
 
     def test_empty_input_boxes(self, logger, top_nav, contact_us_page):
@@ -105,6 +104,43 @@ class TestContactUs:
         except:
             logger.exception("")
             assert False
+
+    def test_send_now_button(self, logger, top_nav,explicit_wait, contact_us_link_data, contact_us_page):
+        try:
+            explicit_wait.until(expected_conditions.element_to_be_clickable(top_nav.CONTACT_LINK_LOCATOR))
+            top_nav.contact_link().click()
+            contact_us_page.full_name_input_box().send_keys(contact_us_link_data["Name"])
+            contact_us_page.email_input_box().send_keys(contact_us_link_data["Email"])
+            contact_us_page.mobile_number_input_box().send_keys(contact_us_link_data["MobileNo"])
+            contact_us_page.message_input_box().send_keys(contact_us_link_data["Message"])
+            contact_us_page.send_now_button().click()
+            explicit_wait.until(expected_conditions.alert_is_present())
+            alert = self.driver.switch_to.alert
+            if contact_us_link_data["CompleteData"] == "Yes":
+                assert alert.text == "Your request has been successfully submitted."
+            else:
+                assert alert.text != "Your request has been successfully submitted."
+            alert.accept()
+            contact_us_page.full_name_input_box().clear()
+            contact_us_page.email_input_box().clear()
+            contact_us_page.mobile_number_input_box().clear()
+            contact_us_page.message_input_box().clear()
+        except:
+            logger.exception("")
+            assert False
+
+    def test_message_input_box(self, logger, contact_us_page, top_nav, explicit_wait):
+
+            top_nav.contact_link().click()
+            contact_us_page.message_input_box().send_keys("")
+
+
+
+
+
+
+
+
 
 
 

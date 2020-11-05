@@ -1,0 +1,15 @@
+Name,Email,MobileNo,Message,CompleteData
+,abc123@abc.com,6666666666,hi,No
+,,6666666666,hi,No
+,,,hi,No
+tom,abc123@abc.com,6666666666,,No
+tom,abc123@abc.com,,,No
+tom,,,,No
+,abc123@abc.com,6666666666,,No
+tom,,,hi,No
+,abc123@abc.com,,hi,No
+tom,,6666666666,,No
+tom,abc123@abc.com,,hi,No
+tom,,,hi,No
+tom,abc123@abc.com,6666666666,hi,Yes
+

@@ -23,3 +23,13 @@ def load_mobile_data():
 @pytest.fixture(params=load_mobile_data())
 def mobile_data(request):
     return request.param
+
+
+def load_contact_us_link_data():
+    with open(get_test_data_path() + "ContactUs/contactus_link_data.csv")as iteration_file:
+        return list(csv.DictReader(iteration_file))
+
+
+@pytest.fixture(params=load_contact_us_link_data())
+def contact_us_link_data(request):
+    return request.param
