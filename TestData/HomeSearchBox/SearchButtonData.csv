@@ -1,0 +1,7 @@
+FromText,ToText,FromCityIndex,TocityIndex,DeptDate,RetDate,AdultCount,ChildCount,InfantCount,IsValidData,RoundTrip
+cor,dh,3,1,10,20,2,3,4,FALSE,Yes
+new,du,2,3,0,,1,4,3,FALSE,No
+ba,de,1,6,30,,4,1,2,FALSE,Yes
+aus,bo,2,4,25,35,3,2,1,TRUE,Yes
+de,mu,3,1,15,,1,0,0,FALSE,Yes
+Ko,Ko,1,1,0,0,2,3,4,FALSE,Yes

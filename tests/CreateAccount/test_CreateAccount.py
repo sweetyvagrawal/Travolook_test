@@ -10,17 +10,12 @@ def load_create_account_data():
         return list(csv.DictReader(c_account_daa))
 
 
-@pytest.fixture(params=load_create_account_data())
+@pytest.fixture(params=load_create_account_data(), scope="class")
 def create_account_data(request):
     return request.param
 
 
 @pytest.mark.usefixtures("setup")
-@pytest.mark.usefixtures("logger")
-@pytest.mark.usefixtures("explicit_wait")
-@pytest.mark.usefixtures("create_account_page")
-@pytest.mark.usefixtures("top_nav")
-@pytest.mark.usefixtures("login_page")
 class TestCreateAccount:
     def test_create_account_window_labels(self, logger, create_account_page, top_nav, login_page):
         try:

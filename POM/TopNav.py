@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 class TopNav:
     LOGIN_LINK_LOCATOR = (By.ID, "login_top1")
     CONTACT_LINK_LOCATOR = (By.XPATH, "//nav/div/div/ul[1]/li[4]/a")
+    CONTACT_US_DROPDOWN_MENU = (By.XPATH, "//li[@id='resclick']/div[@class='dropdown-menu']")
 
     def __init__(self, driver: webdriver):
         self.driver = driver
@@ -34,7 +35,7 @@ class TopNav:
         return self.driver.find_element_by_xpath("//li[@id='resclick']/a")
 
     def contact_us_dropdown_menu(self):
-        return self.driver.find_element_by_xpath("//li[@id='resclick']/div[@class='dropdown-menu']")
+        return self.driver.find_element(self.CONTACT_US_DROPDOWN_MENU[0], self.CONTACT_US_DROPDOWN_MENU[1])
 
     def contact_us_dropdown_items(self):
         return self.driver.find_elements_by_xpath("//li[@id='resclick']/div[@class='dropdown-menu']/a")

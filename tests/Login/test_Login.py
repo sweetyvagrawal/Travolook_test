@@ -1,8 +1,7 @@
 import csv
 import pytest
 from selenium.webdriver.support import expected_conditions
-
-from Utilities.data_fixtures import load_emails_data
+from Utilities.data_fixtures import email_data
 from Utilities.utility import get_test_data_path
 
 
@@ -11,24 +10,17 @@ def load_sign_in_data():
         return list(csv.DictReader(iteration_file))
 
 
-
-
-
-@pytest.fixture(params=[{"key": "", "IsValid": False}, {"key": "dfasfdsfdsf232", "IsValid": True}])
+@pytest.fixture(params=[{"key": "", "IsValid": False}, {"key": "dfasfdsfdsf232", "IsValid": True}], scope="class")
 def password_data(request):
     return request.param
 
 
-@pytest.fixture(params=load_sign_in_data())
+@pytest.fixture(params=load_sign_in_data(), scope="class")
 def sign_in_data(request):
     return request.param
 
 
 @pytest.mark.usefixtures("setup")
-@pytest.mark.usefixtures("top_nav")
-@pytest.mark.usefixtures("login_page")
-@pytest.mark.usefixtures("explicit_wait")
-@pytest.mark.usefixtures("logger")
 class TestLogin:
     def test_validate_all_labels(self, top_nav, login_page, logger):
         try:

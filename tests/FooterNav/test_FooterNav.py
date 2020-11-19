@@ -20,24 +20,22 @@ def load_footer_link_data():
         return list(csv.DictReader(iteration_file))
 
 
-@pytest.fixture(params=load_footer_link_data())
+@pytest.fixture(params=load_footer_link_data(), scope="class")
 def footer_link_data(request):
     return request.param
 
 
-@pytest.fixture(params=load_link_data())
+@pytest.fixture(params=load_link_data(), scope="class")
 def link(request):
     return request.param
 
 
-@pytest.fixture(params=load_url())
+@pytest.fixture(params=load_url(), scope="class")
 def url(request):
     return request.param
 
 
 @pytest.mark.usefixtures("setup")
-@pytest.mark.usefixtures("url")
-@pytest.mark.usefixtures("logger")
 class TestFooterNav:
 
     def test_footer_links(self, footer_link_data, url, logger):

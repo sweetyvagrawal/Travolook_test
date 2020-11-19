@@ -1,18 +1,14 @@
 import pytest
 from selenium.webdriver.support import expected_conditions
-from Utilities.data_fixtures import email_data, mobile_data, contact_us_link_data
+from Utilities.data_fixtures import email_data, mobile_data, contact_us_link_data, message_data
 
 
-@pytest.fixture(params=[{"name": "", "is_valid": False}, {"name": "tom", "is_valid": True}])
+@pytest.fixture(params=[{"name": "", "is_valid": False}, {"name": "tom", "is_valid": True}], scope="class")
 def name_input_data(request):
     return request.param
 
 
 @pytest.mark.usefixtures("setup")
-@pytest.mark.usefixtures("logger")
-@pytest.mark.usefixtures("explicit_wait")
-@pytest.mark.usefixtures("top_nav")
-@pytest.mark.usefixtures("contact_us_page")
 class TestContactUs:
 
     def test_empty_input_boxes(self, logger, top_nav, contact_us_page):
@@ -129,10 +125,16 @@ class TestContactUs:
             logger.exception("")
             assert False
 
-    def test_message_input_box(self, logger, contact_us_page, top_nav, explicit_wait):
-
+    def test_message_input_box(self, logger, contact_us_page, top_nav, explicit_wait, message_data):
+        try:
+            explicit_wait.until(expected_conditions.element_to_be_clickable(top_nav.CONTACT_LINK_LOCATOR))
             top_nav.contact_link().click()
-            contact_us_page.message_input_box().send_keys("")
+            contact_us_page.message_input_box().send_keys(message_data["ActualData"])
+            value = contact_us_page.message_input_box().get_attribute("value")
+            assert value == message_data["ExpectedData"]
+        except:
+            logger.exception("")
+            assert False
 
 
 

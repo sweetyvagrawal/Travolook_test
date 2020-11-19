@@ -5,11 +5,6 @@ from tests.conftest import action_chains
 
 
 @pytest.mark.usefixtures("setup")
-@pytest.mark.usefixtures("logger")
-@pytest.mark.usefixtures("explicit_wait")
-@pytest.mark.usefixtures("forgot_password_page")
-@pytest.mark.usefixtures("top_nav")
-@pytest.mark.usefixtures("login_page")
 class TestForgotPassWord:
     def test_validate_forgot_password_window_label(self, logger, forgot_password_page, top_nav, login_page):
         try:
